@@ -3,6 +3,7 @@
     "axios": "^1.2.1",
     "cheerio": "^1.0.0-rc.12",
     "express": "^4.18.2",
-    "puppeteer": "^19.3.0"
+    "puppeteer": "^19.3.0",
+    "twilio": "^3.83.4"
   }
 }
