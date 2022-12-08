@@ -16,10 +16,11 @@ async function scraper(){
     await page.goto(url);
 
 
-    await page.screenshot({
-        path: "./screenshot.png",
-        fullPage: true
-    });
+    await page.waitForSelector('body');
+
+    const extractedHTML = await page.evaluate(() => document.body.innerHTML);
+
+    // Will more than likely need to create a route with express here to make post request with the all the data from the extratedHTML variable. Need to look into this more tho.
 
     await page.close();
 
